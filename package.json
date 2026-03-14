@@ -1,0 +1,53 @@
+{
+  "name": "mcp-zebpay-server",
+  "version": "0.1.0",
+  "author": "Rajesh.K",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "start:log": "node dist/index.js 2> logs/mcp-server.log",
+    "start:log-append": "node dist/index.js 2>> logs/mcp-server.log",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "logs": "node scripts/log-viewer.js",
+    "logs:watch": "node scripts/log-viewer.js --watch",
+    "logs:errors": "node scripts/log-viewer.js --errors",
+    "logs:http": "node scripts/log-viewer.js --type=http",
+    "logs:mcp": "node scripts/log-viewer.js --type=mcp",
+    "logs:stats": "node scripts/log-stats.js",
+    "logs:clear": "node scripts/clear-logs.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "dotenv": "^17.3.1",
+    "undici": "^7.22.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.3.5",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.test.ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.d.ts",
+      "!src/__tests__/**"
+    ]
+  }
+}

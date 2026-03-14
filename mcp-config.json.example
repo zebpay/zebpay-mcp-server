@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "zebpay": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": "/path/to/ai-agents",
+      "env": {
+        "ZEBPAY_API_KEY": "YOUR_API_KEY_HERE",
+        "ZEBPAY_API_SECRET": "YOUR_API_SECRET_HERE",
+        "ZEBPAY_SPOT_BASE_URL": "https://www.zebapi.com/api/v2",
+        "ZEBPAY_FUTURES_BASE_URL": "https://futures-api.zebpay.com/api/v1",
+        "ZEBPAY_MARKET_BASE_URL": "https://www.zebapi.com/api/v1/market",
+        "MCP_TRANSPORTS": "stdio",
+        "LOG_LEVEL": "info",
+        "HTTP_TIMEOUT_MS": "15000",
+        "HTTP_RETRY_COUNT": "2"
+      }
+    }
+  }
+}
