@@ -45,3 +45,13 @@ coverage/
 *.pid.lock
 .cache/
 
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+.mcpregistry_*
+*.pem
+*.key
+*.p12
+*.pfx
+
