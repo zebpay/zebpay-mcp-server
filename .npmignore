@@ -1,0 +1,36 @@
+# Development and source
+src/
+__tests__/
+coverage/
+.nyc_output/
+tsconfig.json
+*.tsbuildinfo
+
+# Docs and local assets
+docs/
+scripts/
+
+# Local/runtime files
+logs/
+.cache/
+.DS_Store
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.mcpregistry_*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# VCS and editor files
+.git/
+.github/
+.vscode/
+.idea/
+
+# Project-only metadata not needed by consumers
+mcp-config.json.example
+server.json

@@ -1,6 +1,7 @@
 {
-  "name": "mcp-zebpay-server",
-  "version": "0.1.0",
+  "name": "@zebpay_rajesh/zebpay-mcp-server",
+  "version": "1.0.3",
+  "mcpName": "io.github.ZebpayRajesh/zebpay-mcp-server",
   "author": "Rajesh.K",
   "type": "module",
   "main": "dist/index.js",
