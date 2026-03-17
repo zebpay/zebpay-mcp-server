@@ -53,5 +53,4 @@ coverage/
 *.pem
 *.key
 *.p12
-*.pfx
-
+*.pfxserver.json
